@@ -1,10 +1,71 @@
 <html>
 <head><title>Social App</title>
 <style>
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.not-1{
+	width:20%;
+	float: left;
+    padding: 10px;
+}
+.not-2{
+	width:20%;
+	float: left;
+    padding: 10px;
+}
+.not-3{
+	width:20%;
+	float: left;
+    padding: 10px;
+}
+.search{
+	width:40%;
+	float: left;
+	padding: 10px;
+	border: 2px solid blue;
+	border-radius: 10px;
+}
+.side-bar{
+	float: left;
+	width: 25%;
+	height:300px;
+	overflow: auto;
+	padding: 10px;
+	border: solid black 3px;
+}
+.grid-container{
+	display: inline-grid;
+	grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+	width: 75%;
+	float: left;
+}
+.grid-item{
+	width: 300px;
+	height: 100px;
+	text-align: center;
+	background-color: red;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.grid-item:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
 table {width:100%;
 		font-size:30px;}
 td{border:solid black 2px;}
- 
+.footer{
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	background-color: cyan;
+}
+
 </style>
 </head>
 </head>
@@ -12,11 +73,44 @@ td{border:solid black 2px;}
 <h1>Social Work App</h1>
 <hr>
 <table><tr>
-<td>Home</td><td>Categories</td><td><a href="posts.html">Posts</a></td><td>Notifications</td><td>My Profile</td>
+<td>Home</td><td>Categories</td><td><a href="E:\workspace\socialApp\posts.html">Community</a></td><td>Notifications</td><td>My Profile</td>
 </tr></table>
-<ul>
-<li>Rent Request  (0)</li><li>Buy Request  (0)</li><li>Your Pending Request  (0)</li>
-</ul>
 <hr>
+
+	<div class="not-1"><B>Place Item for Rent/Sell</B></div>
+	<div class="not-2"><B><i>Items Currently on rent !</i></B></div>
+	<div class="search">Search....</div>
+	<div class="not-3">Requests(0)</div>
+
+<hr>
+<hr>
+
+
+<div class="side-bar">
+<h3>Community Notifications</h3>
+<ul>
+<li>Notifiation </li><li>Notifiation </li><li>Notifiation </li>
+<li>Notifiation </li><li>Notifiation </li><li>Notifiation </li>
+<li>Notifiation </li><li>Notifiation </li><li>Notifiation </li>
+<li>Notifiation </li><li>Notifiation </li><li>Notifiation </li>
+<li>Notifiation </li><li>Notifiation </li><li>Notifiation </li>
+<li>Notifiation </li><li>Notifiation </li><li>Notifiation </li>
+</ul>
+</div>
+<div class="grid-container">
+	<div class="grid-item">Books</div>
+	<div class="grid-item">Bikes</div>
+	<div class="grid-item">Clothes</div>
+	<div class="grid-item">Food</div>
+	<div class="grid-item">Games</div>
+	<div class="grid-item">Cosmetics</div>
+	<div class="grid-item">Mobile</div>
+	<div class="grid-item">Laptops</div>
+	<div class="grid-item">Internet</div>
+</div>
+
+<div class="footer">
+<h2>About Us...</h2>
+</div>
 </body>
 </html>

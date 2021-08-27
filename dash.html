@@ -1,0 +1,55 @@
+<html>
+<head><title>AIMR</title>
+<link rel="stylesheet" href="homestyle.css">
+</head>
+</head>
+<body>
+<header><h1>AIMR</h1></header>
+<hr>
+
+<div class="navbar">
+<ul>
+	<li><a href="demo.html">Home</a></li>
+	<li><a href="Categories.html">Categories</a></li>
+	<li><a href="Categories.html">Community</a></li>
+	<li><a href="Categories.html">Notifications</a></li>
+	<li><a href="demo.html">Rent / Sell on AIMR</a></li>
+	<li><a href="Categories.html">Items Rented (0)</a></li>
+	<li><a href="Categories.html">Requests Pending (0)</a></li>
+	<li><input type="text" placeholder="Search.." name="search" style="color:black"></li><li><button type="submit" style="color:black">Search</button></li>
+	<li style="float:right"><a href="Categories.html">User Profile</a></li></ul>
+</div>
+
+<hr>
+
+<div class="grid-container" id="categoryGrid">
+
+</div>
+<hr>
+<footer>
+<h2>About Us...</h2>
+</footer>
+<script>
+loadCat();
+function loadCat(){
+	const xhttp = new XMLHttpRequest();
+	xhttp.onload = function() {
+		obj1 = JSON.parse(this.responseText);
+		var myGrid = document.getElementById("categoryGrid");
+		for (let i=0; i < obj1.Categories.length; i++){
+			var div = document.createElement("DIV");
+			div.innerHTML = obj1.Categories[i].name +"  ("+ obj1.Categories[i].count+")";
+			var att = document.createAttribute("class");
+			att.value="grid-item";
+			div.setAttributeNode(att);
+			myGrid.appendChild(div);
+		}
+		
+	}
+	xhttp.open("GET", "Categories_info.json",true); //TODO categories will come from db in json or xml format.
+	xhttp.send();
+}
+
+</script>
+</body>
+</html>

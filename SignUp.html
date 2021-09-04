@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMER - Let's Unite</title>
+
+    <!-- Linking CSS and PHP -->
+    <link rel="stylesheet" href="/AIMER/CSS/1. Sign Up.CSS">
+    <link rel="stylesheet" href="/AIMER/PHP/1. Sign Up.php">
+
+
+<style>
+    body
+        {
+            margin: 0rem;
+            padding: 0rem;
+            background-color: bisque;
+        }
+
+/* CSS For Logo and Name */
+    .left
+        {
+            display: inline-block;
+            position: absolute;
+            left: 35px;
+            top: 20px;
+            line-height: 0px;
+            /* position: sticky; */
+        }
+
+    .left img 
+        {
+            height: 55px;
+            width: 55px;
+        }
+
+    .left h3 
+        {
+            text-align: center;
+            top: 30px;
+            font-size: 14px;
+        }
+
+/* CSS For Navigation Bar */
+    .mid
+        {
+            display: block ;
+            width: 40%;
+            margin: 20px 385px;
+            /* position: sticky; */
+        }
+
+    .navbar
+        {
+            display: inline-block;
+        }
+
+    .navbar li
+        {
+            display: inline-block;
+            font-size: 18px;
+        }
+
+    .navbar li a
+        {
+            color: red;
+            text-decoration: none;
+            padding: 14px 14px;
+        }
+    
+    .navbar li a:hover
+        {
+            text-decoration: underline;
+            color: rgba(19, 230, 142, 0.534);
+        }
+
+/* CSS For Search Box */
+    .right
+        {
+            display: inline-block;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            /* position: sticky; */
+        }
+    
+    .btn 
+        {
+            margin: 0px 5px;
+            padding: 5px 5px;
+            border-radius: 14px;
+            background-color: ghostwhite;
+            border: 2px solid goldenrod;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    
+    .btn:hover
+        {
+            background-color: gainsboro;
+        }
+
+/* CSS For Login Form and Background Image */
+    .container 
+        {
+            display: inline-block;
+            border: 5px solid black;
+            border-radius: 2px;
+            border-style: groove;
+            margin: 40px 5px;
+            height: 455px;
+        }
+    
+    .container img 
+        {
+            height: 412px;
+            width: 840px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 20px 10px;
+            float: right;
+        }
+    
+    form 
+        {
+            display: inline-block;
+            border: 3px solid red;
+            border-style: dashed;
+            border-radius: 10px;
+            margin: 20px 30px 20px 30px;
+            padding: 10px 40px 20px 40px;
+            height: 380px;
+            width: 250px;
+        }
+    
+    form h3
+        {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+    
+    form label
+        {
+            margin-left: 0px;
+        }
+
+    form input
+        {
+            height: 20px;
+            width: 220px;
+            margin-top: 2.5px;
+            margin-bottom: 2.5px;
+            margin-left: 25px;
+        }
+    
+    .btn_signup
+        {
+            margin-top: 12px;
+            margin-left: 100px;
+            border-radius: 80px;
+            padding: 5px 5px;  
+            background-color: ghostwhite;
+            border: 2px solid goldenrod;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+    .login
+        {
+            font-size: 12px;
+            margin-top: 18px;
+            color: rgb(116, 116, 116);
+        }
+
+    .login a
+        {
+            margin-left: 5px;
+        }
+
+/* CSS For About Section */
+        .about 
+            {
+                padding: 20px 20px;
+                border: 3px solid red;
+            }
+
+/* CSS For Footer Buttons */
+        .links-container
+            {
+                margin-top: 60px;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        .links
+            {
+                box-sizing: border-box;
+                text-decoration: none;
+                margin-right: 20px;
+                cursor: pointer;
+                position: relative;
+                padding: 10px 15px;
+                background-color: aliceblue;
+                font-size: 16px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                transition: all 1s;
+                box-shadow: 0 10px 20px rgba(0 , 0 , 0 , 0.19),
+                            0 6px 6px rgba(0 , 0 , 0 , 0.23);
+            }
+        .links:after , .links:before
+            {
+                content: " ";
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                border: 0px solid red;
+                transition: all 1s;
+                text-decoration: none;
+            }
+        .links:after
+            {
+                top: -1px;
+                left: -1px;
+                border-top: 5px solid goldenrod;
+                border-left: 5px solid goldenrod;
+            }
+        .links:before
+            {
+                bottom: -1px;
+                right: -1px;
+                border-bottom: 5px solid goldenrod;
+                border-right: 5px solid goldenrod;
+            }
+        .links:hover
+            {
+                border-top-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+        .links:hover:before , .links:hover:after
+            {
+                width: 102%;
+                height: 102%;
+            }
+
+</style>
+</head>
+
+<body>
+
+<!-- Code For Navigation Bar -->
+    <header>
+        <nav>
+
+            <div class="left">
+                <img src="/AIMER/Logo.jpg" alt="LOGO">
+                <h3>AIMER</h3>
+            </div>
+
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a href="/AIMER/HTML/1. Sign Up Page.html" class="active"> Home </a></li>
+                    <li><a href="#about" class="active"> About Us </a></li>
+                    <li><a href="#" class="active"> Blogs/Posts </a></li>
+                    <li><a href="#" class="active"> Contact Us </a></li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <input type="text" placeholder="Search">
+                <button class="btn">Search</button>
+            </div>
+
+        </nav>
+    </header>
+
+
+<!-- Code For Form and Side Image -->
+    <div class="container">
+        <img src="/AIMER/login background.jpg" alt="">
+        <form action="/AIMER/PHP/1. Sign Up.php" method="POST">
+            <h3>Sign Up Details</h3>
+
+            <label for="Name">Full Name</label><br>
+            <input type="text" name="name" id="name" placeholder="Enter Your Full Name"><br>
+            <label for="Email">E-mail</label><br>
+            <input type="email" name="email" id="email" placeholder="Enter Your E-mail Address"><br>
+            <label for="Password">Password</label><br>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password"><br>
+            <label for="Confirm Password">Confirm Password</label><br>
+            <input type="password" name="cpassword" id="cpassword" placeholder="Re-Enter Your Password"><br>
+            <label for="Phone Number">Phone Number</label><br>
+            <input type="text" name="phone_no" id="phone_no" placeholder="Enter Your Phone Number"><br>
+            
+            <button class="btn_signup" type="submit">Sign Up</button>
+
+            <div class="login">
+                Already Have an Account?
+                <a href="#">Login</a>
+            </div>
+
+
+        </form>
+    </div>
+
+
+<!-- Code For About Section -->
+    <div class="about" id="about">
+        <h2>ABOUT US</h2>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia a aliquam consequatur labore ad, molestias quia, natus eius quam porro blanditiis repellat dicta cumque eaque ipsum praesentium rerum, facere culpa sit inventore mollitia! Explicabo, incidunt, dolores vel qui et facilis id maiores voluptas reprehenderit quae veniam molestiae in aspernatur, autem rerum recusandae porro reiciendis eveniet dignissimos quo fugit! Eos consectetur saepe, ex excepturi totam quas quae natus ducimus aspernatur voluptatem a? Neque dolores id saepe illum voluptatum atque modi perferendis impedit autem, quod velit similique doloremque dolore asperiores ea corrupti eligendi sit. Blanditiis optio illum ipsum, ad minima in praesentium commodi voluptates vel totam maxime aut sunt, at, odio laudantium? Molestiae natus, necessitatibus explicabo beatae vitae dignissimos tempora ab doloremque et excepturi repellendus provident vel suscipit libero eos maxime voluptatum velit aliquid, ipsam sequi fugit quaerat voluptatibus quidem aperiam. Nobis molestiae sunt voluptates quod cumque fugit natus magni totam, temporibus nam fuga ex, deserunt dolores in aliquam. Nostrum error magnam, dignissimos repudiandae minus laborum ut, adipisci laboriosam unde earum asperiores animi placeat laudantium deleniti neque eaque incidunt nulla, dolorem quas autem maxime quaerat beatae illo! Alias nulla facilis facere quasi voluptate recusandae, incidunt perferendis voluptatem corrupti aliquam veniam laboriosam quia iusto hic reiciendis eum aspernatur obcaecati repudiandae culpa eveniet neque tempore totam. Voluptatum inventore fugiat itaque ullam quia. Dolore excepturi, quo aperiam dolorem, quas ipsum quos vel corporis sapiente laboriosam architecto ullam. Consequuntur, voluptatibus asperiores. Omnis corporis sunt eius accusantium libero aliquid illum corrupti magni, enim deserunt voluptates rerum voluptate cumque dolor ipsum officia perspiciatis necessitatibus dolorem quia dolorum quisquam quaerat asperiores molestias. Nihil repudiandae excepturi accusantium, nemo obcaecati quisquam, reprehenderit blanditiis numquam in fugiat ea placeat rem animi, facere ratione aut? Sequi tempora in possimus deleniti optio sapiente quas sed accusantium delectus a, quae, unde molestias repellat nisi asperiores.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam earum necessitatibus similique excepturi quo voluptate eaque, omnis aliquid, recusandae quaerat, culpa magnam atque tempore harum suscipit dolorum? Iusto quod aliquam cupiditate blanditiis quis, eius asperiores recusandae vel dolorem non, illum quibusdam nemo ut expedita quisquam minus magni? Quod esse officiis ullam incidunt quo eveniet quas? Commodi necessitatibus ducimus atque modi repudiandae ab, aut laudantium nostrum! Minus, consequatur fuga voluptas dolorum, quibusdam dolor quam nostrum accusamus dolorem laboriosam perferendis. Eaque sunt explicabo nobis perferendis sed dolorem cupiditate maxime laborum laboriosam asperiores dolores unde excepturi, iusto repellendus. Perspiciatis quasi magnam deleniti odio?
+    </div>
+
+
+<!-- Code For Blogs/Posts -->
+    <div class="blogclass" id="blog">
+
+    </div>
+
+
+<!-- Code For Contact Us -->
+    <div class="contact_us" id="contact">
+
+    </div>
+  
+    
+<!-- Code For Footer Section Page Links -->
+    <div class="links-container">
+        <a class="links" href="https://www.facebook.com">Facebook</a>
+        <a class="links" href="https://www.instagram.com">Instagram</a>
+        <a class="links" href="www.twitter.com">Twitter</a>
+        <a class="links" href="https://www.linkedin.com">Linkedin</a>
+    </div>
+
+
+</body>
+
+</html>
